@@ -1,0 +1,5 @@
+[{
+    "name": "Huffman File Compressor",
+    "description": "Simple file compressor",
+    "route": "huffman"
+}]
