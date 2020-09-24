@@ -1,10 +1,12 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import 'bootstrap/dist/css/bootstrap.min.css';
 import PageLayout from "../components/page-layout/page-layout";
 import Layout from "../components/layout/layout"
 import Carousel from "../components/carousel/carousel"
 import _ from "lodash"
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../styles/global.css'
 
 const Home = () => {
   const data = useStaticQuery(graphql`

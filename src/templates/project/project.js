@@ -11,6 +11,7 @@ export const query = graphql`
       description
       route
       id
+      repo
     }
   }
 ` 
@@ -19,8 +20,8 @@ const ProjectPage = ({data}) => {
   return (
   <PageLayout>
     <Layout>
-        <h1 style={{color: "lightgray"}}>{project.name}</h1>
-        <p style={{color: "lightgray", opacity: 0.7}}>{project.description}</p>
+        <h1 className={"title"}>{project.name}</h1>
+        <p className={"subtitle"}>{project.description}</p>
     </Layout>
   </PageLayout>
 )}

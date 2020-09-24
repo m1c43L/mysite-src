@@ -5,8 +5,8 @@ import PageLayout from "../components/page-layout/page-layout"
 const AboutPage = () => (
   <PageLayout>
     <Layout>
-      <h1>About the Author</h1>
-      <p>Welcome to my Gatsby site.</p>
+      <h1 className={"title"}>About Me</h1>
+      <p className={"subtitle"}>Welcome to my Gatsby site.</p>
     </Layout>
   </PageLayout>
 )
