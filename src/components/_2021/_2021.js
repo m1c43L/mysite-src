@@ -43,7 +43,8 @@ const _2021 = ({contents}) => {
             hours: 0,
             days: 0
         }
-        formatted.days  = Math.floor(Math.abs(left)/dayInMillis)
+        left = Math.abs(left)
+        formatted.days  = Math.floor(left/dayInMillis)
         left -= formatted.days * dayInMillis
         formatted.hours = Math.floor(left /  hourInMillis)
         left -= formatted.hours * hourInMillis
@@ -72,20 +73,20 @@ const _2021 = ({contents}) => {
     return(
     <div>
         <Jumbotron>
-            <h1 >{millisLeft > 0?"2020" : "2021"}</h1>
+            <h1 style={{'fontSize': window.innerWidth > 1000? '150px': '75px'}}>{millisLeft > 0?"2020" : "2021"}</h1>
             <div className={'wrapper'}>
             <p>{formatted()}</p>
             <p className={'small'}>{'ddd:hh:mm:ss'}</p>
             </div>
+           
         </Jumbotron>    
         
-         {millisLeft <= 0? <Fireworks
+        {millisLeft <= 0? <Fireworks
             speed={3}
-            density={10}
-            colors={['#ff0','#ff3','#cc0','#ff4500','#ff6347']}
-            iterations={100}
-            // height={150}
-            // width={100}
+            density={5}
+            colors={['#ff0','#ff3','#cc0','#ff4500','#ff6347', '#0000FF', '#FF00FF', '#00FFFF']}
+            height={window.innerHeight - 100}
+            width={window.innerWidth - 100}
             zIndex={1}
             circular={true}
         />: ''}
