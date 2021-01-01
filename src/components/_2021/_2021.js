@@ -35,12 +35,9 @@ const _2021 = ({contents}) => {
 
     useEffect(() => {
          run()
+         setInnerWidth(window.innerWidth)
+         setInnerHeight(window.innerHeight)
     }, [])
-
-    useEffect(() => {
-        setInnerWidth(window.innerWidth)
-        setInnerHeight(window.innerHeight)
-    }, [millisLeft])
 
     function getMetas  (left) {
         const formatted = {
