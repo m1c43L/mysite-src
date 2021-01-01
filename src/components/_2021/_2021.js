@@ -10,6 +10,8 @@ import './_2021.css'
 const _2021 = ({contents}) => {
     let newYearMillis = (new Date("Jan 01 2021 00:00:00")).valueOf()
     let [millisLeft, setMillistLeft] = useState(newYearMillis - Date.now().valueOf())
+    const [innerWidth, setInnerWidth] = useState(0)
+    const [innerHeight, setInnerHeight] = useState(0)
     let running = false
 
     const dayInMillis = 86400000
@@ -33,6 +35,8 @@ const _2021 = ({contents}) => {
 
     useEffect(() => {
          run()
+         setInnerWidth(window.innerWidth)
+         setInnerHeight(window.innerHeight)
     }, [])
 
     function getMetas  (left) {
@@ -73,7 +77,7 @@ const _2021 = ({contents}) => {
     return(
     <div>
         <Jumbotron>
-            <h1 style={{'fontSize': window.innerWidth > 1000? '150px': '75px'}}>{millisLeft > 0?"2020" : "2021"}</h1>
+            <h1 style={{'fontSize': innerWidth > 1000? '150px': '75px'}}>{millisLeft > 0?"2020" : "2021"}</h1>
             <div className={'wrapper'}>
             <p>{formatted()}</p>
             <p className={'small'}>{'ddd:hh:mm:ss'}</p>
@@ -85,8 +89,8 @@ const _2021 = ({contents}) => {
             speed={3}
             density={5}
             colors={['#ff0','#ff3','#cc0','#ff4500','#ff6347', '#0000FF', '#FF00FF', '#00FFFF']}
-            height={window.innerHeight - 100}
-            width={window.innerWidth - 100}
+            height={innerHeight - 100}
+            width={innerWidth - 100}
             zIndex={1}
             circular={true}
         />: ''}
