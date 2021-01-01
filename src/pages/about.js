@@ -6,7 +6,7 @@ const AboutPage = () => (
   <PageLayout>
     <Layout>
       <h1 className={"title"}>About Me</h1>
-      <p className={"subtitle"}>Welcome to my Gatsby site.</p>
+      <p className={"subtitle"}></p>
     </Layout>
   </PageLayout>
 )
