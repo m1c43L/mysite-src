@@ -21,11 +21,7 @@ const _2021 = ({contents}) => {
         running = true;
         update()
     }
-
-    // function stop() {
-    //     running = false;
-    // }
-
+    
     function update() {
         setTimeout(() => {
             if (running) {

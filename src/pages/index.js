@@ -10,7 +10,7 @@ import '../styles/global.css'
 import _2021 from "../components/_2021/_2021";
 
 const Home = () => {
-  // const data = useStaticQuery(graphql`
+  //  useStaticQuery(graphql`
   // query {
   //   allMainCarouselJson {
   //     edges {

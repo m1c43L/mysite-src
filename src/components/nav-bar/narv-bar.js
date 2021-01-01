@@ -1,23 +1,23 @@
-import { graphql, useStaticQuery } from "gatsby"
+// import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 import _ from "lodash"
 
 const NavBar = () => {
-    const data = useStaticQuery(graphql`
-    query{
-      allProjectsJson {
-        edges {
-          node {
-            name
-            route
-            id
-          }
-        }
-      }
-    }
-    `)
-    const projects = _.map(data.allProjectsJson.edges, (edge) => edge.node);
+    // const data = useStaticQuery(graphql`
+    // query{
+    //   allProjectsJson {
+    //     edges {
+    //       node {
+    //         name
+    //         route
+    //         id
+    //       }
+    //     }
+    //   }
+    // }
+    // `)
+    const projects = [] // _.map(data.allProjectsJson.edges, (edge) => edge.node);
     return (<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
     <Navbar.Brand href="/">Michael Gilbert</Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
