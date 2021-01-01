@@ -35,9 +35,12 @@ const _2021 = ({contents}) => {
 
     useEffect(() => {
          run()
-         setInnerWidth(window.innerWidth)
-         setInnerHeight(window.innerHeight)
     }, [])
+
+    useEffect(() => {
+        setInnerWidth(window.innerWidth)
+        setInnerHeight(window.innerHeight)
+    }, [millisLeft])
 
     function getMetas  (left) {
         const formatted = {
@@ -87,10 +90,10 @@ const _2021 = ({contents}) => {
         
         {millisLeft <= 0? <Fireworks
             speed={3}
-            density={5}
+            density={8}
             colors={['#ff0','#ff3','#cc0','#ff4500','#ff6347', '#0000FF', '#FF00FF', '#00FFFF']}
-            height={innerHeight - 100}
-            width={innerWidth - 100}
+            height={innerHeight - Math.min((innerHeight * 0.20), 200)}
+            width={innerWidth - Math.min((innerWidth * 0.20), 200)}
             zIndex={1}
             circular={true}
         />: ''}
