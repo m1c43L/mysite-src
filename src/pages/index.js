@@ -7,7 +7,7 @@ import Layout from "../components/layout/layout"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/global.css'
-import _2021 from "../components/_2021/_2021";
+import NewYear from "../components/new-year/new-year";
 
 const Home = () => {
   //  useStaticQuery(graphql`
@@ -33,7 +33,7 @@ const Home = () => {
   return (
       <PageLayout>
         <Layout style={{marginTop: 100}}>
-          <_2021 contents={{}}></_2021>
+          <NewYear contents={{}} year={2022}></NewYear>
         </Layout>
       </PageLayout>     
   )

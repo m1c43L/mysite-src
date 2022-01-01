@@ -18,7 +18,7 @@ const NavBar = () => {
     // }
     // `)
     const projects = [] // _.map(data.allProjectsJson.edges, (edge) => edge.node);
-    return (<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    return (<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" style={{'zIndex': 1000}}>
     <Navbar.Brand href="/">Michael Gilbert</Navbar.Brand>
     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
