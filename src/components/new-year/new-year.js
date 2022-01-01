@@ -19,9 +19,9 @@ const NewYear = ({contents, year}) => {
     let [soundStatus, setSoundStatus] = useState(Sound.status.STOPPED)
     let running = false
     run()
-    if (typeof window !== `undefined`){
-      window. soundManager.setup({ignoreMobileRestrictions: true});
-    }
+    // if ( window){
+    //   window. soundManager.setup({ignoreMobileRestrictions: true});
+    // }
    
     function run() {
         running = true;
