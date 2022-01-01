@@ -4,6 +4,7 @@ import { dispayMillis} from '../../utils/time'
 import './new-year.css'
 import { Fireworks, useFireworks } from 'fireworks-js/dist/react'
 import Sound  from 'react-sound';
+import { soundManager } from 'soundmanager2';
 
 
 /**
@@ -20,6 +21,7 @@ const NewYear = ({contents, year}) => {
     let [soundStatus, setSoundStatus] = useState(Sound.status.STOPPED)
     let running = false
     run()
+    soundManager.setup({ignoreMobileRestrictions: true});
     function run() {
         running = true;
         update()
@@ -78,8 +80,8 @@ const NewYear = ({contents, year}) => {
                 "https://fireworks.js.org/sounds/explosion2.mp3"
             ],
             "volume": {
-                "min": 1,
-                "max": 10
+                "min": 10,
+                "max": 70
             }
         },
         }
