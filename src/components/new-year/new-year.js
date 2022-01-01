@@ -21,7 +21,9 @@ const NewYear = ({contents, year}) => {
     let [soundStatus, setSoundStatus] = useState(Sound.status.STOPPED)
     let running = false
     run()
-    soundManager.setup({ignoreMobileRestrictions: true});
+    if ( window){
+      soundManager.setup({ignoreMobileRestrictions: true});
+    }
     function run() {
         running = true;
         update()
