@@ -33,7 +33,7 @@ const Home = () => {
   return (
       <PageLayout>
         <Layout style={{marginTop: 100}}>
-          <NewYear contents={{}} year={2022}></NewYear>
+          <NewYear contents={{}} year={2023}></NewYear>
         </Layout>
       </PageLayout>     
   )
