@@ -27,13 +27,18 @@ body {
   -moz-background-clip: text;
   -webkit-background-clip: text;
   text-transform: uppercase;
-  font-size: 100px;
+  font-size: calc(100% + 50px + 12vw);
   text-align: center;
-  line-height: .75;
   margin: 10px 0;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: cursive;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'cursive'; */
 }
 /* styling my button */
+
+.new-year-greeting {
+  color: whitesmoke;
+  font-family: cursive;
+}
 
 .white-mode {
   text-decoration: none;
@@ -59,10 +64,16 @@ p {
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: black;
-   opacity: 1 !;
-   z-index: 100;
+    opacity: 1 !;
+    z-index: 100;
+    font-style: oblique;
   }
-  
+
+  .timer {
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px;
+  }
 
 .wrapper {  
   margin-top: 40px;
@@ -71,8 +82,10 @@ p {
 }
 
 .small {
-  font-size: 18px;
-  opacity: 1;
+  font-size: 16px;
+  opacity: 0.5;
+  padding-top: 0px;
+  margin-top: 0px;
   color: black;
 }
 
@@ -83,9 +96,8 @@ p {
   position: right bottom;
   color: black;
 }
-
+ 
 .jumbotron {
-  background-image: url("/images/golden_ratio_bg.jpg");
   background-size: cover;
-
+  background-color: transparent;
 }

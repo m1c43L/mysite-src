@@ -1,3 +1,8 @@
 body {
-    background: linear-gradient(180deg, rgba(0,0,0,11.931832) 93%, rgba(4,68,128,0.738555) 115%) no-repeat center center fixed;
+    /* background: linear-gradient(180deg, rgba(0,0,0,11.931832) 93%, rgba(4,68,128,0.738555) 115%) no-repeat center center fixed; */
+    background: url("/images/night.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }

@@ -19,6 +19,7 @@ const NewYear = ({contents, year}) => {
     let [soundStatus, setSoundStatus] = useState(Sound.status.STOPPED)
     let running = false
     run()
+    const inMillis1Day = 1000 * 60 * 60 * 24
     // if ( window){
     //   window. soundManager.setup({ignoreMobileRestrictions: true});
     // }
@@ -71,7 +72,7 @@ const NewYear = ({contents, year}) => {
             }
         },
         "boundaries": {
-            "visible": false
+            "visible": false,
         },
         "sound": {
             "enabled": true,
@@ -85,7 +86,7 @@ const NewYear = ({contents, year}) => {
                 "max": 70
             }
         },
-        }
+        mouse: { click: true, }}
       })
 
       const startFireworks = () => {
@@ -118,10 +119,11 @@ const NewYear = ({contents, year}) => {
       volume={100}
     />
         <Jumbotron style={{'zIndex': 100}} className={'jumbotron'} >
-            <h1 className={'year'}>{!isNewYear? year -1 : year}</h1>
+            {new Date().getFullYear() !== new Date(Date.now() - inMillis1Day ).getFullYear()?<p className="new-year-greeting">Happy New Year</p>: undefined}
+            <h1 className={'year'}>{!isNewYear? new Date().getFullYear() : year}</h1>
             <div className={'wrapper'}>
-            <p>{dispayMillis((millisLeft))}</p>
-            <p className={'small'}>{'ddd:hh:mm:ss'}</p>
+            <p className="timer">{dispayMillis((millisLeft))}</p>
+            <p className={'small'}>{isNewYear? '': 'until new year'}</p>
             <p className={'song-credit'} >Music: Auld Lang Syne by Alexander Nakarada (www.serpentsoundstudios.com)</p>
             </div>
            

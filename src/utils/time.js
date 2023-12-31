@@ -42,7 +42,19 @@ export const formatMillis = (millis) => {
  */
 export const  dispayMillis = (millis) => {
     const { days, hours, minutes, seconds} = formatMillis(millis)
-    return `${formatTime(days, 2)}:${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`
+
+    let hasValue = false
+    // Remove the leading empty values.
+    const formatted = `${formatTime(days, 2)}:${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`.split(':').filter((v) => {
+
+        if (hasValue || !v.split('').every((c) => c === '0')) {
+            hasValue = true
+        }
+        
+        return hasValue
+    }).join(':')
+
+    return formatted
 }
 
 const formatTime = (num, count=1) => {

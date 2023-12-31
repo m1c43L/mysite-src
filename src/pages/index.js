@@ -29,11 +29,13 @@ const Home = () => {
             // contents={_.map(data.allMainCarouselJson.edges, (edge) => edge.node)}
             //>
           // </Carousel> */}
+  const inMillis10Days = 1000 * 60 * 60 * 24 * 10
+  const year = new Date(Date.now() + inMillis10Days) 
   
   return (
       <PageLayout>
         <Layout style={{marginTop: 100}}>
-          <NewYear contents={{}} year={2023}></NewYear>
+          <NewYear contents={{}} year={year.getFullYear() }></NewYear>
         </Layout>
       </PageLayout>     
   )
