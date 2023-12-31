@@ -6,7 +6,7 @@ import { graphql } from "gatsby"
 
 export const query = graphql`
   query($id: String) {
-    projectsJson(id: { eq: $id }){
+    projectsJson(id: { eq: $id }) {
       name
       description
       route
@@ -14,15 +14,16 @@ export const query = graphql`
       repo
     }
   }
-` 
-const ProjectPage = ({data}) => {
+`
+const ProjectPage = ({ data }) => {
   const project = data.projectsJson
   return (
-  <PageLayout>
-    <Layout>
+    <PageLayout>
+      <Layout>
         <h1 className={"title"}>{project.name}</h1>
         <p className={"subtitle"}>{project.description}</p>
-    </Layout>
-  </PageLayout>
-)}
+      </Layout>
+    </PageLayout>
+  )
+}
 export default ProjectPage

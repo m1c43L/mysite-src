@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 import { Carousel as BCarousel } from "react-bootstrap"
 import _ from "lodash"
 
 /**
- * 
+ *
  * @param {
  *  {
  *      staticImgs: {
@@ -14,32 +14,27 @@ import _ from "lodash"
  *          grayscale: booleam
  *      }[]
  *  }
- * } props 
+ * } props
  */
-const Carousel = ({contents}) => {
-    const [index, setIndex] = useState(0);
+const Carousel = ({ contents }) => {
+  const [index, setIndex] = useState(0)
 
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);
-    };
-    return(
-        <BCarousel activeIndex={index} onSelect={handleSelect}>
-            {_.map(contents, (content, i) => (
-                <BCarousel.Item key={i}>
-                <img 
-                    className="d-block w-100"
-                    src={content.src}
-                    alt={content.alt}
-                    />
-                <BCarousel.Caption>
-                    <h3 style={{color: 'lightgray'}}> {content.label} </h3>
-                    <p style={{color: 'lightgray'}}> {content.text} </p>
-                </BCarousel.Caption>
-            </BCarousel.Item>
-            ))}
-        </BCarousel>
-    )
-} 
+  const handleSelect = (selectedIndex, e) => {
+    setIndex(selectedIndex)
+  }
+  return (
+    <BCarousel activeIndex={index} onSelect={handleSelect}>
+      {_.map(contents, (content, i) => (
+        <BCarousel.Item key={i}>
+          <img className="d-block w-100" src={content.src} alt={content.alt} />
+          <BCarousel.Caption>
+            <h3 style={{ color: "lightgray" }}> {content.label} </h3>
+            <p style={{ color: "lightgray" }}> {content.text} </p>
+          </BCarousel.Caption>
+        </BCarousel.Item>
+      ))}
+    </BCarousel>
+  )
+}
 
-
-export default Carousel;
+export default Carousel

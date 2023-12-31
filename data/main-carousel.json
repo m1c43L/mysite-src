@@ -1,6 +1,8 @@
-[{
+[
+  {
     "text": "San Francisco",
     "label": "San Francisco",
     "src": "images/main_wallpaper.jpg",
     "alt": "San Francisco Images"
-}]  
+  }
+]

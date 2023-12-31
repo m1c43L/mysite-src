@@ -1,6 +1,8 @@
-[{
+[
+  {
     "name": "Huffman File Compressor",
     "description": "Simple file compressor",
     "route": "huffman",
     "repo": "https://github.com/m1c43L/File-Compressor-Huffman"
-}]
+  }
+]

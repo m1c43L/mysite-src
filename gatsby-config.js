@@ -14,8 +14,8 @@ module.exports = {
       },
     },
     `gatsby-transformer-json`,
-    `gatsby-transformer-sharp`, 
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-react-native-web`
+    `gatsby-plugin-react-native-web`,
   ],
 }
