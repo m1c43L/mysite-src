@@ -121,14 +121,15 @@ const NewYear = ({ contents, year }) => {
         playStatus={soundStatus}
         volume={100}
       />
+       <h1 className={"year"}>
+          {!isNewYear ? new Date().getFullYear() : year}
+        </h1>
       <Jumbotron style={{ zIndex: 100 }} className={"jumbotron"}>
         {new Date().getFullYear() !==
         new Date(Date.now() - inMillis1Day).getFullYear() ? (
           <p className="new-year-greeting">Happy New Year</p>
         ) : undefined}
-        <h1 className={"year"}>
-          {!isNewYear ? new Date().getFullYear() : year}
-        </h1>
+       
         <div className={"wrapper"}>
           <p className="timer">{dispayMillis(millisLeft)}</p>
           <p className={"small"}>{isNewYear ? "" : "until new year"}</p>
