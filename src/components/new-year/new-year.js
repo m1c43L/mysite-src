@@ -115,7 +115,7 @@ const NewYear = ({ contents, year }) => {
   }
 
   return (
-    <div>
+    <div style={{ width: "fit-content"}}>
       <Sound
         url="/sounds/auld_lang_syne.mp3"
         playStatus={soundStatus}
